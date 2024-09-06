@@ -1,16 +1,25 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 import darkModeToggle from '../components/dark_mode_toggle_component.vue';
+import {useRouter} from 'vue-router';
 
+const router = useRouter();
 const password = ref('');
+const passwordError = ref('');
 
 const submitForm = () => {
-  console.log('Password submitted:', password.value);
+  if (password.value === localStorage.getItem('password')) {
+    // Redirect to the preview with vue router
+    router.push('/index')
+  } else {
+    passwordError.value = 'Wrong password';
+  }
 };
 </script>
 
 <template>
   <div class="p-4 max-w-md mx-auto bg-gray-100 dark:bg-[#3c3f41] rounded-lg shadow-md transition-colors duration-500">
+    <span v-if="passwordError" class="text-red-500">{{ passwordError }}</span>
     <h1 class="text-xl font-bold mb-4 text-black dark:text-[#a9b7c6]">Find the password to discover the preview</h1>
     <form @submit.prevent="submitForm" class="space-y-4">
       <div>
@@ -21,9 +30,14 @@ const submitForm = () => {
         <input type="submit" value="Submit" class="w-full px-4 py-2 bg-black text-white rounded-md shadow-sm hover:bg-gray-800 dark:hover:bg-[#4e5254] transition-colors duration-500">
       </div>
     </form>
-    <darkModeToggle/>
+    <div class="w-100" id="buttonDarkMode">
+      <darkModeToggle/>
+    </div>
   </div>
 </template>
 
 <style scoped>
+#buttonDarkMode > button {
+  width: 100%;
+}
 </style>

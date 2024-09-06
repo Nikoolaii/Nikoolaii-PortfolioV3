@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import passwordForm from '../forms/password_form.vue';
 import { isDarkMode } from '../controllers/dark_mode_controller';
+
+localStorage.setItem('password', 'YesImThePassword');
 </script>
 
 <template>
