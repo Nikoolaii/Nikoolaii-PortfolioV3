@@ -1,18 +1,15 @@
 /** @type {import('tailwindcss').Config} */
-export default {
-  darkMode: 'class', // Enable dark mode
-  content: ['./src/views/**/*.{html,js,vue}',
-    './src/components/**/*.{html,js,vue}',
-    './src/forms/**/*.{html,js,vue}',
-    './src/index.html'],
+module.exports = {
+  content: [
+    "./components/**/*.{js,vue,ts}",
+    "./layouts/**/*.vue",
+    "./pages/**/*.vue",
+    "./plugins/**/*.{js,ts}",
+    "./app.vue",
+    "./error.vue",
+  ],
   theme: {
-    extend: {
-      transitionProperty: {
-        'height': 'height',
-        'spacing': 'margin, padding',
-      },
-    },
+    extend: {},
   },
   plugins: [],
 }
-

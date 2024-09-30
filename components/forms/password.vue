@@ -1,16 +1,17 @@
 <script setup lang="ts">
 import { ref } from 'vue';
-import darkModeToggle from '../components/dark_mode_toggle_component.vue';
-import {useRouter} from 'vue-router';
+import darkModeToggle from '../components/darkModeToggle.vue';
 
-const router = useRouter();
 const password = ref('');
 const passwordError = ref('');
 
 const submitForm = () => {
   if (password.value === localStorage.getItem('password')) {
     // Redirect to the preview with vue router
-    router.push('/index')
+    localStorage.setItem('connected', 'true');
+
+    // Refresh the page
+    location.reload();
   } else {
     passwordError.value = 'Wrong password';
   }
