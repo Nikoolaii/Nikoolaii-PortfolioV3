@@ -3,7 +3,7 @@
 </script>
 
 <template>
-
+<dark-mode-toggle/>
 </template>
 
 <style scoped>

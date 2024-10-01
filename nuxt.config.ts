@@ -9,4 +9,11 @@ export default defineNuxtConfig({
       autoprefixer: {},
     },
   },
+  plugins: ['~/plugins/fontawesome.ts'],
+  components: [
+    {
+      path: '~/components',
+      pathPrefix: false,
+    },
+  ],
 })
