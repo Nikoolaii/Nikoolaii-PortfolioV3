@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 import {isDarkMode, toggleDarkMode} from '~/controllers/darkMode';
+import {FontAwesomeIcon} from "@fortawesome/vue-fontawesome";
 </script>
 
 <template>
@@ -7,6 +8,3 @@ import {isDarkMode, toggleDarkMode} from '~/controllers/darkMode';
     <font-awesome-icon :icon="isDarkMode ? 'sun' : 'moon'" class="h-5 dark:text-black text-white" />
   </button>
 </template>
-
-<style scoped>
-</style>

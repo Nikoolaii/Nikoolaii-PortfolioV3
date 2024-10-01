@@ -1,10 +1,13 @@
 <script lang="ts" setup>
 import {onMounted, ref} from 'vue';
 import {isDarkMode} from '~/controllers/darkMode';
+import {sleep} from '@antfu/utils';
+import Footer from '~/components/Footer.vue';
 
 const loading = ref(true);
 
-onMounted(() => {
+onMounted(async () => {
+  await sleep(300);
   if (isDarkMode.value) {
     document.documentElement.classList.add('dark');
   } else {
@@ -16,12 +19,13 @@ onMounted(() => {
 
 <template>
   <div>
-    <div v-if="loading" class="loader"><loader></loader></div>
-    <div v-else :class="{'dark': isDarkMode}" class="bg-white dark:bg-gray-800 transition-colors duration-500 ease-in-out">
+    <div v-if="loading" class="loader"><loader/></div>
+    <div v-else :class="{'dark': isDarkMode}">
       <navbar/>
       <main>
         <slot></slot>
       </main>
+      <Footer/>
     </div>
   </div>
 </template>
