@@ -1,16 +1,17 @@
 <script lang="ts" setup>
-
+import TreeJsModel from "~/components/TreeJsModel.vue";
 </script>
 
 <template>
-  <!-- Presentation -->
-  <div>
-    <h1 class="text-3xl font-bold mb-4 text-black dark:text-white">Nikolaï LEMERRE</h1>
-    <p class="text-black dark:text-white">Student frontend developer</p>
-    <p class="text-black dark:text-white">First year of Master's degree in web ingeneering</p>
+  <div class="lg:grid lg:grid-cols-2 grid-cols-1 sm:items-center justify-items-center my-2 mx-auto">
+    <div class="w-full lg:w-auto">
+      <tree-js-model />
+    </div>
+    <div class="w-full lg:w-auto">
+      <title-presentation />
+    </div>
   </div>
+  <hr class="my-4" />
 </template>
 
-<style scoped>
-
-</style>
+<style scoped></style>

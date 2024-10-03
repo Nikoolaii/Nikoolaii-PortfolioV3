@@ -3,7 +3,9 @@
 
 <template>
 <NuxtLayout>
-    <presentation/>
+    <div class="container mx-auto">
+      <presentation/>
+    </div>
 </NuxtLayout>
 </template>
 

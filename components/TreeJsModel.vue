@@ -1,0 +1,21 @@
+<script lang="ts" setup>
+import { OrbitControls, GLTFModel } from '@tresjs/cientos'
+</script>
+
+<template>
+  <div class="w-96 h-96">
+    <TresCanvas shadows>
+      <OrbitControls :autoRotate="true" :autoRotateSpeed="2" />
+      <Suspense>
+        <!-- <FBXModel path="/models/computer/Computer.fbx" /> -->
+        <GLTFModel path="/models/cute_mug/scene.gltf" />
+      </Suspense>
+      <TresDirectionalLight :intensity="1.5" :position="[70, 8, -70]" cast-shadow />
+      <TresDirectionalLight :intensity="1.5" :position="[-70, 8, 70]" cast-shadow />
+      <TresDirectionalLight :intensity="1.5" :position="[0, -70, 0]" cast-shadow />
+      <TresDirectionalLight :intensity="1.5" :position="[0, 70, 0]" cast-shadow />
+    </TresCanvas>
+  </div>
+</template>
+
+<style scoped></style>
