@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import TreeJsModel from "~/components/TreeJsModel.vue";
+import TreeJsModel from "~/components/presentation/TreeJsModel.vue";
 </script>
 
 <template>
@@ -11,7 +11,6 @@ import TreeJsModel from "~/components/TreeJsModel.vue";
       <title-presentation />
     </div>
   </div>
-  <hr class="my-4" />
 </template>
 
 <style scoped></style>

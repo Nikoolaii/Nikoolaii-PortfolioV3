@@ -18,7 +18,11 @@ export default defineNuxtConfig({
       path: '~/components',
       pathPrefix: false,
     },
+    {
+      path: '~/components/presentation',
+      pathPrefix: false,
+    }
   ],
 
-  modules: ['@nuxt/ui', '@tresjs/nuxt'],
+  modules: ['@nuxt/ui', '@tresjs/nuxt', '@nuxt/content'],
 })
