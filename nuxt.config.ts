@@ -21,6 +21,10 @@ export default defineNuxtConfig({
     {
       path: '~/components/presentation',
       pathPrefix: false,
+    },
+    {
+      path: '~/components/posts',
+      pathPrefix: false,
     }
   ],
 

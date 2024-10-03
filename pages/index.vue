@@ -2,13 +2,12 @@
 </script>
 
 <template>
-<NuxtLayout>
+  <NuxtLayout>
     <div class="container mx-auto">
-      <presentation/>
+      <presentation />
+      <show_post />
     </div>
-</NuxtLayout>
+  </NuxtLayout>
 </template>
 
-<style scoped>
-
-</style>
+<style scoped></style>
