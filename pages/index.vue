@@ -3,9 +3,9 @@
 
 <template>
   <NuxtLayout>
-    <div class="container mx-auto">
+    <div>
       <presentation />
-      <show_post />
+      <get_six />
     </div>
   </NuxtLayout>
 </template>

@@ -29,4 +29,8 @@ export default defineNuxtConfig({
   ],
 
   modules: ['@nuxt/ui', '@tresjs/nuxt', '@nuxt/content'],
+
+  content: {
+    documentDriven: true,
+  }
 })

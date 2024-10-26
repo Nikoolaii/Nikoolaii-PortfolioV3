@@ -20,7 +20,7 @@ onMounted(async () => {
 <template>
   <div>
     <div v-if="loading" class="loader"><loader/></div>
-    <div v-else :class="{'dark': isDarkMode}">
+    <div v-else :class="{'dark': isDarkMode}" class="container mx-auto">
       <navbar/>
       <main>
         <slot></slot>
