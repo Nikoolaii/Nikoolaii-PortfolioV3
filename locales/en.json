@@ -1,0 +1,17 @@
+{
+  "presentation": {
+    "title": "Presentation",
+    "developer": "Full Stack Developer",
+    "student": "Student at ESGI",
+    "coffee": "Coffee Enthusiast",
+    "small_description": "20 years old, Lille, France",
+    "presentation_description": "Hello, I am a computer science student passionate about web and mobile development. I love learning new technologies and applying them in personal projects to improve my skill level and technical knowledge. Currently doing an apprenticeship at Netim as a PHP developer."
+  },
+  "posts": {
+    "title": "Posts",
+    "description": "Here are some articles I wrote on various topics. I hope you enjoy reading them!",
+    "read_more": "Read more",
+    "see_all": "See all",
+    "no_posts": "No articles have been published yet."
+  }
+}

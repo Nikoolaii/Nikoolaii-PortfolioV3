@@ -5,6 +5,7 @@
   <NuxtLayout>
     <div>
       <presentation />
+      <info />
       <get_six />
     </div>
   </NuxtLayout>

@@ -3,10 +3,7 @@
 </script>
 
 <template>
-<NuxtLayout>
-  <div>
-  </div>
-</NuxtLayout>
+
 </template>
 
 <style scoped>

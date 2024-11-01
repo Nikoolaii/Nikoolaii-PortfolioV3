@@ -11,7 +11,8 @@ const Links = [
 
 <template>
   <div>
-    <u-link v-for="link in Links" :key="link.name" :to="link.path" class="mx-2">{{ link.name }}</u-link>
+<!--  Go to home-->
+     <nuxt-link to="/"><p class="text-xl"><span class="text-violet-500 dark:text-violet-400 font-bold">Nikoolaii</span> | Portfolio</p></nuxt-link>
   </div>
 </template>
 

@@ -1,0 +1,17 @@
+{
+  "presentation": {
+    "title": "Présentation",
+    "developer": "Développeur Full Stack",
+    "student": "Étudiant à l'ESGI",
+    "coffee": "Amateur de café",
+    "small_description": "20 ans, Lille, France",
+    "presentation_description": "Bonjour, je suis un étudiant en informatique passionné par le développement web et mobile. J'aime apprendre de nouvelles technologies et les mettre en pratique dans des projets personnels afin d'améliorer mon niveau de compétence ainsi que mes connaissances techniques. Actuellement en alternance chez Netim en tant que développeur PHP."
+  },
+  "posts": {
+    "title": "Articles",
+    "description": "Voici quelques articles que j'ai écrits sur divers sujets. J'espère que vous prendrez plaisir à les lire !",
+    "read_more": "Lire la suite",
+    "see_all": "Voir tout",
+    "no_posts": "Aucun article n'a été publié pour le moment."
+  }
+}
