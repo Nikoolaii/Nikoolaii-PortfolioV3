@@ -36,7 +36,6 @@ export default {
     const {locale} = useI18n();
 
     const getPath = () => {
-      console.log('caca')
       return `/posts/${locale.value === 'en' ? 'en' : 'fr'}/`
     };
 
