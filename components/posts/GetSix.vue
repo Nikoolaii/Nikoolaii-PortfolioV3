@@ -17,8 +17,6 @@
           <template #footer>
             <ULink :to="post._path">{{ $t("posts.read_more") }}</ULink>
           </template>
-          <template #not-found><p>{{ $t("posts.no_posts") }}</p>
-          </template>
         </UCard>
       </div>
     </ContentList>
