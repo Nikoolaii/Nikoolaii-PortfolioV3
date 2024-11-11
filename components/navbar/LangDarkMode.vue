@@ -2,10 +2,10 @@
 import {useI18n} from 'vue-i18n';
 import {isDarkMode, toggleDarkMode} from '~/controllers/darkMode';
 
-const {locale} = useI18n();
+const {setLocale, locale} = useI18n();
 
 const changeLanguage = () => {
-  locale.value = locale.value === 'en' ? 'fr' : 'en';
+  setLocale(locale.value === 'en' ? 'fr' : 'en');
 };
 </script>
 

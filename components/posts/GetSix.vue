@@ -36,8 +36,8 @@ export default {
     const {locale} = useI18n();
 
     const getPath = () => {
-      console.log(`/posts/${locale.value === 'en' ? 'en' : 'fr'}`)
-      return `/posts/${locale.value === 'en' ? 'en' : 'fr'}`;
+      console.log('caca')
+      return `/posts/${locale.value === 'en' ? 'en' : 'fr'}/`
     };
 
     return {
@@ -51,7 +51,7 @@ export default {
         year: 'numeric',
         month: 'long',
         day: 'numeric'
-      }).format(new Date(date));
+      }).format(new Date(date))
     }
   }
 }

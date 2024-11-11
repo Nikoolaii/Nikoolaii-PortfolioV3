@@ -11,6 +11,7 @@ export default defineNuxtConfig({
     },
   },
 
+
   vite: {
     css: {
       preprocessorOptions: {
@@ -49,6 +50,11 @@ export default defineNuxtConfig({
     lazy: true,
     strategy: 'no_prefix',
     defaultLocale: 'en',
+    detectBrowserLanguage: {
+      useCookie: true,
+      cookieKey: 'i18n_redirected',
+      redirectOn: 'root'
+    }
   },
 
   content: {
