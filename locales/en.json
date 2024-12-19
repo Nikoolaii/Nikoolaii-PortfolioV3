@@ -13,5 +13,13 @@
     "read_more": "Read more",
     "see_all": "See all",
     "no_posts": "No articles have been published yet."
+  },
+  "timeline" : {
+    "title": "Timeline",
+    "timeline_description": "Here is an overview of my professional career and studies.",
+    "work" : "Work",
+    "education" : "Education",
+    "internship": "Internship",
+    "apprenticeship": "Apprenticeship"
   }
 }

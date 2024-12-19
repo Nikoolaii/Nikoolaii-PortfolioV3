@@ -13,5 +13,25 @@
     "read_more": "Lire la suite",
     "see_all": "Voir tout",
     "no_posts": "Aucun article n'a été publié pour le moment."
+  },
+  "timeline": {
+    "title": "Parcours",
+    "timeline_description": "Voici un aperçu de mon parcours professionnel et de mes études.",
+    "work": "Travail",
+    "education": "Éducation",
+    "internship": "Stage",
+    "apprenticeship": "Alternance",
+    "anetmo": {
+      "title": "Développeur Full Stack",
+      "content": ["Développement d'un site vitrine sous Wordpress", "Développement d'un site de statistique en PHP et MySQL."]
+    },
+    "nordreprog": {
+      "title": "Gestionnaire base de données",
+      "content": ["Gestion de la base de données de fichiers moteurs", "Faire tourner différents site vitrines et de e-commerce.", "Développement de logiciels d'automatisation sous Python avec une interface"]
+    },
+    "netim": {
+      "title": "Expert en ingénierie informatique",
+      "content": ["Développement de modules CMS", "Support de tickets clients", "Développement de thèmes CMS", "Mise en place de scripts fonctionnels"]
+    }
   }
 }
