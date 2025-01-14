@@ -39,7 +39,13 @@ export default defineNuxtConfig({
     }
   ],
 
-  modules: ['@nuxt/ui', '@tresjs/nuxt', '@nuxt/content', '@nuxtjs/i18n'],
+  modules: [
+    '@nuxt/ui',
+    '@tresjs/nuxt',
+    '@nuxt/content',
+    '@nuxtjs/i18n',
+    '@nuxt/image'
+  ],
 
   i18n: {
     langDir: 'locales',

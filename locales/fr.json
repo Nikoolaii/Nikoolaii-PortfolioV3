@@ -4,9 +4,10 @@
     "developer": "Développeur Full Stack",
     "student": "Étudiant à l'ESGI",
     "coffee": "Amateur de café",
-    "small_description": "20 ans, Lille, France",
+    "small_description": "21 ans, Lille, France",
     "presentation_description": "Bonjour, je suis un étudiant en informatique passionné par le développement web et mobile. J'aime apprendre de nouvelles technologies et les mettre en pratique dans des projets personnels afin d'améliorer mon niveau de compétence ainsi que mes connaissances techniques. Actuellement en alternance chez Netim en tant que développeur PHP."
   },
+  "footer": "Fait avec ❤️ par moi",
   "posts": {
     "title": "Articles",
     "description": "Voici quelques articles que j'ai écrits sur divers sujets. J'espère que vous prendrez plaisir à les lire !",
@@ -23,15 +24,60 @@
     "apprenticeship": "Alternance",
     "anetmo": {
       "title": "Développeur Full Stack",
-      "content": ["Développement d'un site vitrine sous Wordpress", "Développement d'un site de statistique en PHP et MySQL."]
+      "content": {
+        "1": "Développement d'un site vitrine sous Wordpress",
+        "2": "Développement d'un site de statistique en PHP et MySQL"
+      }
     },
     "nordreprog": {
       "title": "Gestionnaire base de données",
-      "content": ["Gestion de la base de données de fichiers moteurs", "Faire tourner différents site vitrines et de e-commerce.", "Développement de logiciels d'automatisation sous Python avec une interface"]
+      "content": {
+        "1": "Gestion de la base de données de fichiers moteurs",
+        "2": "Faire tourner différents site vitrines et de e-commerce",
+        "3": "Développement de logiciels d'automatisation sous Python avec une interface"
+      }
     },
     "netim": {
       "title": "Expert en ingénierie informatique",
-      "content": ["Développement de modules CMS", "Support de tickets clients", "Développement de thèmes CMS", "Mise en place de scripts fonctionnels"]
+      "content": {
+        "1": "Développement de modules CMS",
+        "2": "Support de tickets clients",
+        "3": "Développement de thèmes CMS",
+        "4": "Mise en place de scripts fonctionnels"
+      }
+    },
+    "bts_sio": {
+      "title": "BTS SIO option SLAM",
+      "content": {
+        "1": "Développement d'applications et de solutions logicielles",
+        "2": "Apprentissage des langages de programmation (Java, PHP, JavaScript, Python)",
+        "3": "Conception et gestion de bases de données",
+        "4": "Cybersécurité et protection des données",
+        "5": "Analyse et conception de systèmes d'information",
+        "6": "Développement d'applications web et mobile",
+        "7": "Support et maintenance des solutions informatiques"
+      }
+    },
+    "esgi_1": {
+      "title": "Bachelor Ingénierie du web",
+      "content": {
+        "1": "Approfondissement des langages de programmation",
+        "2": "Apprentissage des langages de programmation (PHP, JavaScript, TypeScript)",
+        "3": "Conception et gestion de bases de données",
+        "4": "Développement d'applications web",
+        "5": "Découverte des technologies de conteneurisation",
+        "6": "Approfonfissement de Git et de la méthode Agile"
+      }
+    },
+    "esgi_2": {
+      "title": "Mastère Ingénierie du web",
+      "content": {
+        "1": "Approfondissement des langages de programmation",
+        "2": "Approfondissement des technologies de conteneurisation",
+        "3": "Approfondissement de la gestion de base de données",
+        "4": "Découverte de la gestion de projet",
+        "5": "Droit RGPD et sécurité informatique"
+      }
     }
   }
 }
