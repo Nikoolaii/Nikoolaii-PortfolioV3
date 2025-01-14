@@ -7,11 +7,77 @@
     "small_description": "20 years old, Lille, France",
     "presentation_description": "Hello, I am a computer science student passionate about web and mobile development. I love learning new technologies and applying them in personal projects to improve my skill level and technical knowledge. Currently doing an apprenticeship at Netim as a PHP developer."
   },
+  "footer": "Made with ❤️ by me",
   "posts": {
     "title": "Posts",
     "description": "Here are some articles I wrote on various topics. I hope you enjoy reading them!",
     "read_more": "Read more",
     "see_all": "See all",
     "no_posts": "No articles have been published yet."
+  },
+  "timeline": {
+    "title": "Timeline",
+    "timeline_description": "Here is an overview of my professional career and studies.",
+    "work": "Work",
+    "education": "Education",
+    "internship": "Internship",
+    "apprenticeship": "Apprenticeship",
+    "anetmo": {
+      "title": "Full Stack Developer",
+      "content": {
+        "1": "Development of a showcase website using WordPress",
+        "2": "Development of a statistics website using PHP and MySQL"
+      }
+    },
+    "nordreprog": {
+      "title": "Database Manager",
+      "content": {
+        "1": "Management of engine files database",
+        "2": "Maintaining various showcase and e-commerce websites",
+        "3": "Development of automation software with UI using Python"
+      }
+    },
+    "netim": {
+      "title": "Computer Engineering Expert",
+      "content": {
+        "1": "Development of CMS modules",
+        "2": "Customer ticket support",
+        "3": "Development of CMS themes",
+        "4": "Implementation of functional scripts"
+      }
+    },
+    "bts_sio": {
+      "title": "BTS SIO SLAM option",
+      "content": {
+        "1": "Development of applications and software solutions",
+        "2": "Learning programming languages (Java, PHP, JavaScript, Python)",
+        "3": "Database design and management",
+        "4": "Cybersecurity and data protection",
+        "5": "Information systems analysis and design",
+        "6": "Web and mobile application development",
+        "7": "IT solutions support and maintenance"
+      }
+    },
+    "esgi_1": {
+      "title": "Bachelor in Web Engineering",
+      "content": {
+        "1": "Advanced programming languages",
+        "2": "Learning programming languages (PHP, JavaScript, TypeScript)",
+        "3": "Database design and management",
+        "4": "Web application development",
+        "5": "Introduction to containerization technologies",
+        "6": "Advanced Git and Agile methodology"
+      }
+    },
+    "esgi_2": {
+      "title": "Master's in Web Engineering",
+      "content": {
+        "1": "Advanced programming languages",
+        "2": "Advanced containerization technologies",
+        "3": "Advanced database management",
+        "4": "Introduction to project management",
+        "5": "GDPR law and IT security"
+      }
+    }
   }
 }

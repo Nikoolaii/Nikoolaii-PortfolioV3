@@ -6,6 +6,7 @@
     <div>
       <presentation />
       <info />
+      <duo-timeline />
       <get_six />
     </div>
   </NuxtLayout>
