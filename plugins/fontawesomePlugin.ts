@@ -10,4 +10,8 @@ export default defineNuxtPlugin((nuxtApp) => {
   nuxtApp.hook('app:mounted', () => {
     dom.watch(); // Force le rechargement des icônes FontAwesome après le montage de l'application
   });
+
+  nuxtApp.hook('page:finish', () => {
+    dom.watch(); // Force le rechargement des icônes FontAwesome après chaque changement de route
+  });
 });
