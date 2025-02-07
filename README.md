@@ -10,9 +10,9 @@
 
 
 
-# Discord WOL
+# Portfolio V3
 
-A bot to do a wake on lan for your local pc 
+This is the third version of my portfolio, made with nuxtjs, it's an online résumé of my work and my timeline
 
 </div>
 
@@ -23,7 +23,7 @@ A bot to do a wake on lan for your local pc
 
 ## ℹ️ About the Project
 
-This is the third version of my portfolio, made with nuxtjs, it's an online résumé of my work and my timeline
+This project is a personal portfolio website that showcases my work, my experiences and also somes posts. It is built with Nuxtjs, a general-purpose programming language. The website is designed to be responsive and accessible on all devices, including desktops, tablets, and smartphones.
 
 
 
