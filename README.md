@@ -1,75 +1,97 @@
-# Nuxt 3 Minimal Starter
+<a name="readme-top"></a>
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+<p align="center"><a href="https://github.com/Nikoolaii/Nikoolaii-PortfolioV3/graphs/contributors"><img src="https://img.shields.io/github/contributors/Nikoolaii/Nikoolaii-PortfolioV3.svg?style=for-the-badge" alt="Contributors"></a>
+        <a href="https://github.com/Nikoolaii/Nikoolaii-PortfolioV3/network/members"><img src="https://img.shields.io/github/forks/Nikoolaii/Nikoolaii-PortfolioV3.svg?style=for-the-badge" alt="Forks"></a>
+        <a href="https://github.com/Nikoolaii/Nikoolaii-PortfolioV3/stargazers"><img src="https://img.shields.io/github/stars/Nikoolaii/Nikoolaii-PortfolioV3.svg?style=for-the-badge" alt="Stargazers"></a>
+        <a href="https://github.com/Nikoolaii/Nikoolaii-PortfolioV3/issues"><img src="https://img.shields.io/github/issues/Nikoolaii/Nikoolaii-PortfolioV3.svg?style=for-the-badge" alt="Issues"></a></p><br/>
 
-## Setup
 
-Make sure to install the dependencies:
+<div align="center">
+
+
+
+# Discord WOL
+
+A bot to do a wake on lan for your local pc 
+
+</div>
+
+
+<div align="center"><h4><a href="#-about-the-project">ℹ️ About the Project</a> • <a href="#-stack-tech">🛠 Stack Tech</a> • <a href="#-setup">⚙ ️Setup</a> • <a href="#-contributing">👏🏻 Contributing</a> • <a href="#-about-the-author">👨🏻‍ About the Author</a> • <a href="#-license">📖 License</a></h4></div>
+
+<!-- TABLE_CONTENT_PLACEHOLDER -->
+
+## ℹ️ About the Project
+
+This is the third version of my portfolio, made with nuxtjs, it's an online résumé of my work and my timeline
+
+
+
+## 🛠 Stack Tech
+- [![Nuxt][Nuxt-badge]][Nuxt-url] - A general-purpose programming language
+
+[Nuxt-badge]: https://img.shields.io/badge/nuxt-3670A0?style=for-the-badge&logo=nuxt&logoColor=ffdd54
+[Nuxt-url]: https://www.python.org/}
+
+
+## ⚙ ️Setup
+
+### Installation
+
+1. Clone the repository to your local machine:
 
 ```bash
-# npm
+git clone
+```
+
+2. Install the required dependencies:
+
+```bash
 npm install
-
-# pnpm
-pnpm install
-
-# yarn
-yarn install
-
-# bun
-bun install
 ```
 
-## Development Server
-
-Start the development server on `http://localhost:3000`:
+3. Start the development server:
 
 ```bash
-# npm
 npm run dev
-
-# pnpm
-pnpm run dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
 ```
 
-## Production
 
-Build the application for production:
 
-```bash
-# npm
-npm run build
+## 👏🏻 Contributing
 
-# pnpm
-pnpm run build
+We welcome contributions from the community! If you would like to contribute to this project, please follow the guidelines below.
 
-# yarn
-yarn build
+### Ways to Contribute
 
-# bun
-bun run build
-```
+- Report bugs or issues by opening a new issue on our GitHub repository.
+- Suggest new features or improvements by opening a new issue on our GitHub repository.
+- Contribute code by forking the repository, making changes, and submitting a pull request.
 
-Locally preview production build:
+### Contribution Instructions
 
-```bash
-# npm
-npm run preview
+1. Fork the repository.
+2. Create a new branch for your feature or bug fix: `git checkout -b my-feature-branch`.
+3. Make the necessary changes and commit them: `git commit -am 'Add my new feature'`.
+4. Push your branch to your forked repository: `git push origin my-feature-branch`.
+5. Open a pull request against the main repository, describing the changes you made and why they should be merged.
+### Contributors
 
-# pnpm
-pnpm run preview
+<a href="https://github.com/Nikoolaii/Nikoolaii-PortfolioV3/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=Nikoolaii/Nikoolaii-PortfolioV3" />
+</a>
 
-# yarn
-yarn preview
 
-# bun
-bun run preview
-```
+## 👨🏻‍ About the Author
 
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+**Nikoolaii**
+
+This project was created by Nikoolaii. Connect with me on [GitHub](https://github.com/Nikoolaii)  to learn more about my projects and professional background.
+
+
+## 📖 License
+
+This project is licensed under the [MIT License](https://opensource.org/licenses/MIT).
+
+
+<p align="right"><a href="#readme-top">Top ⬆️</a></p>
