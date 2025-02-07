@@ -4,8 +4,10 @@ import { schoolTimeline, workTimeline } from '~/data/timeline';
 
 <template>
   <div class="grid grid-cols-2 gap-4">
-    <ContentTimeline :timeline="workTimeline" :title="$t('timeline.title') + ' - ' + $t('timeline.work')" />
-    <ContentTimeline :timeline="schoolTimeline" :title="$t('timeline.title') + ' - ' + $t('timeline.education')" />
+    <ContentTimeline :timeline="workTimeline" :title="$t('timeline.title') + ' - ' + $t('timeline.work')"
+      direction="right" />
+    <ContentTimeline :timeline="schoolTimeline" :title="$t('timeline.title') + ' - ' + $t('timeline.education')"
+      direction="right" />
   </div>
 </template>
 

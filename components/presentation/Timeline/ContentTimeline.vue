@@ -1,5 +1,10 @@
 <script lang="ts" setup>
 import { useI18n } from 'vue-i18n';
+import { onMounted, nextTick } from 'vue';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
 
 interface TimelineItem {
   title: string;
@@ -13,6 +18,7 @@ interface TimelineItem {
 const props = defineProps<{
   timeline: TimelineItem[];
   title: string;
+  direction: 'left' | 'right';
 }>();
 
 const { t } = useI18n();
@@ -20,6 +26,27 @@ const { t } = useI18n();
 const getContent = (item: TimelineItem) => {
   return item.content.map(contentKey => t(contentKey));
 };
+
+onMounted(async () => {
+  await nextTick(); // Assurez-vous que les éléments sont rendus avant d'appliquer les animations
+
+  gsap.utils.toArray('.timeline-item').forEach((item) => {
+    gsap.fromTo(item,
+      { opacity: 0, x: props.direction === 'left' ? -50 : 50 },
+      {
+        opacity: 1,
+        x: 0,
+        scrollTrigger: {
+          trigger: item,
+          start: 'top 90%',
+          end: 'bottom 10%',
+          toggleActions: 'play reverse play reverse',
+        },
+        duration: 1,
+      }
+    );
+  });
+});
 </script>
 
 <template>
@@ -29,7 +56,7 @@ const getContent = (item: TimelineItem) => {
       {{ title }}
     </h1>
     <ul>
-      <li v-for="(item, index) in timeline" :key="index" class="mb-4">
+      <li v-for="(item, index) in timeline" :key="index" class="timeline-item mb-4">
         <h2 class="text-xl font-semibold">{{ t(item.title) }}</h2>
         <h3 class="text-lg text-gray-600">{{ item.subtitle }}</h3>
         <p v-if="item.type">{{ t(item.type) }}</p>
