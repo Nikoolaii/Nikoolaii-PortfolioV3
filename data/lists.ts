@@ -7,4 +7,4 @@ export const linkList = [
     icon: 'bi:linkedin',
     link: 'https://www.linkedin.com/in/nikolai-lemerre/'
   }
-];
+]

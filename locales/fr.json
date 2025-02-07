@@ -79,5 +79,8 @@
         "5": "Droit RGPD et sécurité informatique"
       }
     }
+  },
+  "technologies": {
+    "title": "Technologies"
   }
 }

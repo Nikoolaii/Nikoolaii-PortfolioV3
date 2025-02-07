@@ -46,6 +46,11 @@ export default defineNuxtConfig({
     '@nuxtjs/i18n',
     '@nuxt/image'
   ],
+  icon: {
+    serverBundle: {
+      collections: ['twemoji', 'material-symbols', 'mdi']
+    }
+  },
 
   i18n: {
     langDir: 'locales',

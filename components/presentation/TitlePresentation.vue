@@ -1,6 +1,8 @@
 <template>
   <div>
-    <h1 class="text-6xl font-bold">Nikoolaii</h1>
+    <transition appear @before-enter="beforeEnter" @enter="enter">
+      <h1 class="text-6xl font-bold">Nikoolaii</h1>
+    </transition>
     <h3 class="text-4xl font-bold">
       <span class="typed-text text-violet-500 dark:text-violet-400">{{ typeValue }}</span>
       <span class="blinking-cursor text-4xl">|</span>
@@ -11,6 +13,8 @@
 </template>
 
 <script>
+import gsap from 'gsap'
+
 export default {
   name: "typeWiriter",
   data: () => {
@@ -33,11 +37,22 @@ export default {
     setTimeout(this.typeText, this.newTextDelay + 200);
   },
   methods: {
+    beforeEnter(el) {
+      el.style.opacity = '0'
+      el.style.transform = 'translateX(-100px)'
+    },
+    enter(el) {
+      gsap.to(el, {
+        duration: 1,
+        x: 0,
+        opacity: 1,
+      })
+    },
     typeText() {
       if (this.charIndex < this.translatedDisplayTextArray[this.displayTextArrayIndex].length) {
         if (!this.typeStatus) this.typeStatus = true;
         this.typeValue += this.translatedDisplayTextArray[this.displayTextArrayIndex].charAt(
-            this.charIndex
+          this.charIndex
         );
         this.charIndex += 1;
         setTimeout(this.typeText, this.typingSpeed);
@@ -50,8 +65,8 @@ export default {
       if (this.charIndex > 0) {
         if (!this.typeStatus) this.typeStatus = true;
         this.typeValue = this.translatedDisplayTextArray[this.displayTextArrayIndex].substring(
-            0,
-            this.charIndex - 1
+          0,
+          this.charIndex - 1
         );
         this.charIndex -= 1;
         setTimeout(this.eraseText, this.erasingSpeed);
@@ -73,10 +88,12 @@ export default {
 }
 
 @keyframes blink {
+
   from,
   to {
     color: transparent;
   }
+
   50% {
     color: #2c3e50;
   }

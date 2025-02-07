@@ -1,4 +1,6 @@
 <script lang="ts" setup>
+import Technologies from '~/components/TechnologiesList.vue';
+
 </script>
 
 <template>
@@ -8,6 +10,7 @@
       <info />
       <duo-timeline />
       <get_six />
+      <Technologies />
     </div>
   </NuxtLayout>
 </template>
