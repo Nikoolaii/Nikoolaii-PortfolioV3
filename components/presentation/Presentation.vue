@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import TreeJsModel from '~/components/presentation/TreeJsModel.vue'
+import TreeJsModel from '~/components/presentation/treeJsModel.vue'
 </script>
 
 <template>

@@ -2,7 +2,7 @@
 import { onMounted, ref } from 'vue'
 import { isDarkMode } from '~/controllers/darkMode'
 import { sleep } from '@antfu/utils'
-import Footer from '~/components/Footer.vue'
+import Footer from '~/components/footer.vue'
 
 const loading = ref(true)
 
