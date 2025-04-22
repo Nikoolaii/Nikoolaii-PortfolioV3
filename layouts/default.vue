@@ -1,31 +1,31 @@
 <script lang="ts" setup>
-import {onMounted, ref} from 'vue';
-import {isDarkMode} from '~/controllers/darkMode';
-import {sleep} from '@antfu/utils';
-import Footer from '~/components/Footer.vue';
+import { onMounted, ref } from 'vue'
+import { isDarkMode } from '~/controllers/darkMode'
+import { sleep } from '@antfu/utils'
+import Footer from '~/components/Footer.vue'
 
-const loading = ref(true);
+const loading = ref(true)
 
 onMounted(async () => {
-  await sleep(300);
+  await sleep(300)
   if (isDarkMode.value) {
-    document.documentElement.classList.add('dark');
+    document.documentElement.classList.add('dark')
   } else {
-    document.documentElement.classList.remove('dark');
+    document.documentElement.classList.remove('dark')
   }
-  loading.value = false;
-});
+  loading.value = false
+})
 </script>
 
 <template>
   <div>
-    <div v-if="loading" class="loader"><loader/></div>
-    <div v-else :class="{'dark': isDarkMode}" class="container mx-auto">
-      <navbar/>
+    <div v-if="loading" class="loader"><loader /></div>
+    <div v-else :class="{ dark: isDarkMode }" class="container mx-auto">
+      <navbar />
       <main>
         <slot></slot>
       </main>
-      <Footer/>
+      <Footer />
     </div>
   </div>
 </template>

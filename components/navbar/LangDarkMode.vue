@@ -1,20 +1,35 @@
 <script lang="ts" setup>
-import {useI18n} from 'vue-i18n';
-import {isDarkMode, toggleDarkMode} from '~/controllers/darkMode';
+import { useI18n } from 'vue-i18n'
+import { isDarkMode, toggleDarkMode } from '~/controllers/darkMode'
 
-const {setLocale, locale} = useI18n();
+const { setLocale, locale } = useI18n()
 
 const changeLanguage = () => {
-  setLocale(locale.value === 'en' ? 'fr' : 'en');
-};
+  setLocale(locale.value === 'en' ? 'fr' : 'en')
+}
 </script>
 
 <template>
   <div>
-    <u-button :icon="locale === 'en' ? 'twemoji:flag-france' : 'twemoji:flag-united-kingdom'" class="ml-3" color="violet" size="lg" variant="soft"
-              @click="changeLanguage"/>
     <u-button
-        :icon="isDarkMode ? 'material-symbols:sunny-outline-rounded' : 'material-symbols:dark-mode-outline-rounded'"
-        class="ml-3" color="violet" size="lg" variant="soft" @click="toggleDarkMode"/>
+      :icon="locale === 'en' ? 'twemoji:flag-france' : 'twemoji:flag-united-kingdom'"
+      class="ml-3"
+      color="violet"
+      size="lg"
+      variant="soft"
+      @click="changeLanguage"
+    />
+    <u-button
+      :icon="
+        isDarkMode
+          ? 'material-symbols:sunny-outline-rounded'
+          : 'material-symbols:dark-mode-outline-rounded'
+      "
+      class="ml-3"
+      color="violet"
+      size="lg"
+      variant="soft"
+      @click="toggleDarkMode"
+    />
   </div>
 </template>

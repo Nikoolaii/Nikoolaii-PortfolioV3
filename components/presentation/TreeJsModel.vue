@@ -1,17 +1,12 @@
 <style scoped></style>
 <script lang="ts" setup>
 import { OrbitControls, GLTFModel } from '@tresjs/cientos'
-
 </script>
 
 <template>
   <div class="w-96 h-96">
     <TresCanvas shadows>
-      <OrbitControls 
-        :autoRotate=true 
-        :autoRotateSpeed=4
-        :enableZoom="false"
-      />
+      <OrbitControls :autoRotate="true" :autoRotateSpeed="4" :enableZoom="false" />
       <Suspense>
         <GLTFModel path="/models/cute_mug/scene.gltf" />
       </Suspense>

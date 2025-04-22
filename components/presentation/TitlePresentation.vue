@@ -16,25 +16,29 @@
 import gsap from 'gsap'
 
 export default {
-  name: "typeWiriter",
+  name: 'typeWiriter',
   data: () => {
     return {
-      typeValue: "",
+      typeValue: '',
       typeStatus: false,
       typingSpeed: 50,
       erasingSpeed: 50,
       newTextDelay: 2000,
       displayTextArrayIndex: 0,
       charIndex: 0,
-    };
+    }
   },
   computed: {
     translatedDisplayTextArray() {
-      return [this.$t('presentation.developer'), this.$t('presentation.student'), this.$t('presentation.coffee')];
-    }
+      return [
+        this.$t('presentation.developer'),
+        this.$t('presentation.student'),
+        this.$t('presentation.coffee'),
+      ]
+    },
   },
   created() {
-    setTimeout(this.typeText, this.newTextDelay + 200);
+    setTimeout(this.typeText, this.newTextDelay + 200)
   },
   methods: {
     beforeEnter(el) {
@@ -50,36 +54,36 @@ export default {
     },
     typeText() {
       if (this.charIndex < this.translatedDisplayTextArray[this.displayTextArrayIndex].length) {
-        if (!this.typeStatus) this.typeStatus = true;
+        if (!this.typeStatus) this.typeStatus = true
         this.typeValue += this.translatedDisplayTextArray[this.displayTextArrayIndex].charAt(
           this.charIndex
-        );
-        this.charIndex += 1;
-        setTimeout(this.typeText, this.typingSpeed);
+        )
+        this.charIndex += 1
+        setTimeout(this.typeText, this.typingSpeed)
       } else {
-        this.typeStatus = false;
-        setTimeout(this.eraseText, this.newTextDelay);
+        this.typeStatus = false
+        setTimeout(this.eraseText, this.newTextDelay)
       }
     },
     eraseText() {
       if (this.charIndex > 0) {
-        if (!this.typeStatus) this.typeStatus = true;
+        if (!this.typeStatus) this.typeStatus = true
         this.typeValue = this.translatedDisplayTextArray[this.displayTextArrayIndex].substring(
           0,
           this.charIndex - 1
-        );
-        this.charIndex -= 1;
-        setTimeout(this.eraseText, this.erasingSpeed);
+        )
+        this.charIndex -= 1
+        setTimeout(this.eraseText, this.erasingSpeed)
       } else {
-        this.typeStatus = false;
-        this.displayTextArrayIndex += 1;
+        this.typeStatus = false
+        this.displayTextArrayIndex += 1
         if (this.displayTextArrayIndex >= this.translatedDisplayTextArray.length)
-          this.displayTextArrayIndex = 0;
-        setTimeout(this.typeText, this.typingSpeed + 1000);
+          this.displayTextArrayIndex = 0
+        setTimeout(this.typeText, this.typingSpeed + 1000)
       }
     },
   },
-};
+}
 </script>
 
 <style lang="scss" scoped>
@@ -88,7 +92,6 @@ export default {
 }
 
 @keyframes blink {
-
   from,
   to {
     color: transparent;

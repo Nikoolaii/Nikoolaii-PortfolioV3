@@ -75,6 +75,8 @@
 
   body {
     @apply bg-background text-foreground;
-    transition: background-color var(--transition-duration), color var(--transition-duration);
+    transition:
+      background-color var(--transition-duration),
+      color var(--transition-duration);
   }
 }

@@ -1,6 +1,5 @@
 <script lang="ts" setup>
-import Technologies from '~/components/TechnologiesList.vue';
-
+import Technologies from '~/components/TechnologiesList.vue'
 </script>
 
 <template>

@@ -4,10 +4,7 @@ export const workTimeline = [
     subtitle: 'Anetmo',
     type: 'timeline.internship',
     date: '05/2022 - 06/2022',
-    content: [
-      'timeline.anetmo.content.1',
-      'timeline.anetmo.content.2'
-    ],
+    content: ['timeline.anetmo.content.1', 'timeline.anetmo.content.2'],
     tags: ['Wordpress', 'PHP', 'MySQL'],
   },
   {
@@ -18,9 +15,9 @@ export const workTimeline = [
     content: [
       'timeline.nordreprog.content.1',
       'timeline.nordreprog.content.2',
-      'timeline.nordreprog.content.3'
+      'timeline.nordreprog.content.3',
     ],
-    tags: ['Wordpress', 'PHP', 'Python', "WinOLS", "Prestashop"],
+    tags: ['Wordpress', 'PHP', 'Python', 'WinOLS', 'Prestashop'],
   },
   {
     title: 'timeline.netim.title',
@@ -31,11 +28,11 @@ export const workTimeline = [
       'timeline.netim.content.1',
       'timeline.netim.content.2',
       'timeline.netim.content.3',
-      'timeline.netim.content.4'
+      'timeline.netim.content.4',
     ],
-    tags: ['Wordpress', 'PHP', 'MySQL', "WHMCS", "WiseCP", "Blesta", "ClientExec"],
+    tags: ['Wordpress', 'PHP', 'MySQL', 'WHMCS', 'WiseCP', 'Blesta', 'ClientExec'],
   },
-];
+]
 
 export const schoolTimeline = [
   {
@@ -49,7 +46,7 @@ export const schoolTimeline = [
       'timeline.bts_sio.content.4',
       'timeline.bts_sio.content.5',
       'timeline.bts_sio.content.6',
-      'timeline.bts_sio.content.7'
+      'timeline.bts_sio.content.7',
     ],
     tags: ['PHP', 'Javascript', 'Java', 'Python'],
   },
@@ -63,7 +60,7 @@ export const schoolTimeline = [
       'timeline.esgi_1.content.3',
       'timeline.esgi_1.content.4',
       'timeline.esgi_1.content.5',
-      'timeline.esgi_1.content.6'
+      'timeline.esgi_1.content.6',
     ],
     tags: ['PHP', 'Javascript', 'TypeScript', 'Docker'],
   },
@@ -76,8 +73,8 @@ export const schoolTimeline = [
       'timeline.esgi_2.content.2',
       'timeline.esgi_2.content.3',
       'timeline.esgi_2.content.4',
-      'timeline.esgi_2.content.5'
+      'timeline.esgi_2.content.5',
     ],
     tags: ['PHP', 'Javascript', 'TypeScript', 'Docker', 'Kubernetes'],
-  }
-];
+  },
+]
