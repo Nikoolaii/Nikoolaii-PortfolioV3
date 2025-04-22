@@ -1,42 +1,18 @@
 <style scoped></style>
 <script lang="ts" setup>
 import { OrbitControls, GLTFModel } from '@tresjs/cientos'
-import { ref, onMounted, onUnmounted } from 'vue'
+import { ref } from 'vue'
 
-const autoRotate = ref(false)
-const autoRotateSpeed = ref(4)
-let lastScrollTop = 0
-
-const handleScroll = () => {
-  const scrollTop = window.pageYOffset || document.documentElement.scrollTop
-  if (scrollTop > lastScrollTop) {
-    // Scrolling down
-    autoRotateSpeed.value = 4
-  } else {
-    // Scrolling up
-    autoRotateSpeed.value = -4
-  }
-  lastScrollTop = scrollTop <= 0 ? 0 : scrollTop
-
-  autoRotate.value = true
-  setTimeout(() => {
-    autoRotate.value = false
-  }, 1000)
-}
-
-onMounted(() => {
-  window.addEventListener('scroll', handleScroll)
-})
-
-onUnmounted(() => {
-  window.removeEventListener('scroll', handleScroll)
-})
 </script>
 
 <template>
   <div class="w-96 h-96">
     <TresCanvas shadows>
-      <OrbitControls :autoRotate="autoRotate" :autoRotateSpeed="autoRotateSpeed" />
+      <OrbitControls 
+        :autoRotate=true 
+        :autoRotateSpeed=4
+        :enableZoom="false"
+      />
       <Suspense>
         <GLTFModel path="/models/cute_mug/scene.gltf" />
       </Suspense>

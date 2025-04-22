@@ -12,10 +12,6 @@ export const techList = [
     name: 'HTML 5'
   },
   {
-    icon: 'mdi:language-java',
-    name: 'Java'
-  },
-  {
     icon: 'mdi:language-javascript',
     name: 'Javascript'
   },
