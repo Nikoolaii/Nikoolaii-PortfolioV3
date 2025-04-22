@@ -1,7 +1,6 @@
 <style scoped></style>
 <script lang="ts" setup>
 import { OrbitControls, GLTFModel } from '@tresjs/cientos'
-import { ref } from 'vue'
 
 </script>
 

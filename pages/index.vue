@@ -8,9 +8,9 @@ import Technologies from '~/components/TechnologiesList.vue';
     <div>
       <presentation />
       <info />
+      <Technologies />
       <duo-timeline />
       <get_six />
-      <Technologies />
     </div>
   </NuxtLayout>
 </template>
