@@ -21,21 +21,15 @@ const handleGlobalWheel = (e) => {
   const el = techIconsContainer.value;
   if (!el) return;
 
-  // Si la div est visible à l'écran
   if (isDivInViewport(el) && el.scrollWidth > el.clientWidth) {
     const delta = e.deltaY || e.deltaX;
 
-    // Détection en cours de scroll de la div
-    console.log('scrolling techIconsContainer');
-
-    // Scroll vers la droite (descend)
     if (delta > 0) {
       if (el.scrollLeft + el.clientWidth < el.scrollWidth) {
         e.preventDefault();
         el.scrollLeft += delta;
       }
     }
-    // Scroll vers la gauche (remonte)
     else if (delta < 0) {
       if (el.scrollLeft > 0) {
         e.preventDefault();
