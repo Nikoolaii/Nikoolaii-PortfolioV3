@@ -88,7 +88,7 @@ onMounted(fetchRepos)
         <div
           v-for="repo in repos"
           :key="repo.id"
-          class="border rounded-lg p-4 bg-white dark:bg-gray-900 shadow flex flex-col"
+          class="border rounded-lg p-4 bg-white dark:bg-gray-900 shadow-lg flex flex-col"
           style="max-height: 420px;"
         >
           <div class="flex items-center justify-between mb-2">

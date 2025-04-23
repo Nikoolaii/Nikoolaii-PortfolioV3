@@ -14,7 +14,7 @@
     >
       <template #default="{ list }">
         <div v-for="post in list" :key="post._path" class="flex flex-col">
-          <UCard class="flex flex-col flex-1">
+          <UCard class="flex flex-col flex-1 shadow-lg">
             <template #header>
               <h2 class="font-bold text-violet-500 dark:text-violet-400">{{ post.title }}</h2>
               <h2>{{ formatDate(post.date) }}</h2>
