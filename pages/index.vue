@@ -1,5 +1,4 @@
 <script lang="ts" setup>
-import Technologies from '~/components/technologiesListVue.vue'
 </script>
 
 <template>
@@ -7,10 +6,9 @@ import Technologies from '~/components/technologiesListVue.vue'
     <div>
       <presentation />
       <info />
-      <Technologies />
+      <TechnologiesListVue />
       <duo-timeline />
       <get_six />
-      <!-- Ajout des 6 derniers repos GitHub -->
       <get-six-repos />
     </div>
   </NuxtLayout>
