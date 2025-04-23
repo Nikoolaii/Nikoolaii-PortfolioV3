@@ -4,7 +4,7 @@
     "developer": "Développeur Full Stack",
     "student": "Étudiant à l'ESGI",
     "coffee": "Amateur de café",
-    "small_description": "21 ans, Lille, France",
+    "small_description": "{age} ans, Lille, France",
     "presentation_description": "Développeur Full Stack passionné par l'innovation technologique, je suis actuellement en alternance chez Netim où je développe des solutions web robustes pour les personnes souhaitant se lancer dans la vente de noms de domaine. Fort de mon expérience en PHP et d'autres technologies modernes, je m'investis continuellement dans des projets stimulants qui me permettent d'enrichir mes compétences. Mon parcours à l'ESGI en Ingénierie du Web me permet d'allier théorie et pratique pour créer des applications performantes et évolutives."
   },
   "footer": "Fait avec ❤️ par moi",

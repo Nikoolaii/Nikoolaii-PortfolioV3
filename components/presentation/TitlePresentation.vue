@@ -8,7 +8,7 @@
       <span class="blinking-cursor text-4xl">|</span>
       <span :class="{ typing: typeStatus }" class="cursor">&nbsp;</span>
     </h3>
-    <h5 class="text-lg italic">{{ $t('presentation.small_description') }}</h5>
+    <h5 class="text-lg italic">{{ $t('presentation.small_description', { age }) }}</h5>
   </div>
 </template>
 
@@ -26,6 +26,7 @@ export default {
       newTextDelay: 2000,
       displayTextArrayIndex: 0,
       charIndex: 0,
+      age: 0,
     }
   },
   computed: {
@@ -39,8 +40,19 @@ export default {
   },
   created() {
     setTimeout(this.typeText, this.newTextDelay + 200)
+    this.age = this.calculateAge('2003-12-14')
   },
   methods: {
+    calculateAge(birthDateStr) {
+      const today = new Date()
+      const birthDate = new Date(birthDateStr)
+      let age = today.getFullYear() - birthDate.getFullYear()
+      const m = today.getMonth() - birthDate.getMonth()
+      if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
+        age--
+      }
+      return age
+    },
     beforeEnter(el) {
       el.style.opacity = '0'
       el.style.transform = 'translateX(-100px)'
@@ -92,6 +104,7 @@ export default {
 }
 
 @keyframes blink {
+
   from,
   to {
     color: transparent;
