@@ -10,6 +10,8 @@ import Technologies from '~/components/technologiesListVue.vue'
       <Technologies />
       <duo-timeline />
       <get_six />
+      <!-- Ajout des 6 derniers repos GitHub -->
+      <get-six-repos />
     </div>
   </NuxtLayout>
 </template>

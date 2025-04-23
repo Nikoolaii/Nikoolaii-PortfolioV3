@@ -82,5 +82,12 @@
   },
   "technologies": {
     "title": "Technologies"
+  },
+  "github": {
+    "latest_repos": "Latest GitHub Repositories",
+    "loading": "Loading...",
+    "error": "Error while fetching repositories.",
+    "see_all": "See all GitHub repositories",
+    "no_readme": "No README found."
   }
 }
