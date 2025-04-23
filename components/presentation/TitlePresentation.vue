@@ -1,7 +1,7 @@
 <template>
   <div>
     <transition appear @before-enter="beforeEnter" @enter="enter">
-      <h1 class="text-6xl font-bold">Nikoolaii</h1>
+      <h1 class="text-6xl font-bold">Nikolaï LEMERRE</h1>
     </transition>
     <h3 class="text-4xl font-bold">
       <span class="typed-text text-violet-500 dark:text-violet-400">{{ typeValue }}</span>
