@@ -22,7 +22,7 @@ export default defineNuxtConfig({
     },
   },
 
-  plugins: ['~/plugins/fontawesomePlugin.ts', '~/plugins/i18nPlugin.ts'],
+  plugins: ['~/plugins/i18nPlugin.ts'],
 
   components: [
     { path: '~/components', pathPrefix: false },
@@ -30,12 +30,20 @@ export default defineNuxtConfig({
     { path: '~/components/posts', pathPrefix: false },
   ],
 
-  modules: ['@nuxt/ui', '@tresjs/nuxt', '@nuxt/content', '@nuxtjs/i18n', '@nuxt/image'],
+  modules: [
+    '@nuxt/ui',
+    '@tresjs/nuxt',
+    '@nuxt/content',
+    '@nuxtjs/i18n',
+    '@nuxt/image',
+    '@nuxt/icon', // Ajout explicite du module Nuxt Icon
+  ],
 
   icon: {
     serverBundle: {
       collections: ['twemoji', 'material-symbols', 'mdi'],
     },
+    ssr: true, // Force le rendu SSR des icônes
   },
 
   runtimeConfig: {
