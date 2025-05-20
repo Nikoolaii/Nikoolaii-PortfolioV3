@@ -2,67 +2,51 @@
 import { techList } from '~/data/tech'
 import { onMounted, ref, onUnmounted } from 'vue'
 import { gsap } from 'gsap'
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
-
-gsap.registerPlugin(ScrollTrigger)
 
 const techIconsContainer = ref(null)
+const techIconsList = ref(null)
 
-const isDivInViewport = (el) => {
-  if (!el) return false
-  const rect = el.getBoundingClientRect()
-  return rect.top >= 0 && rect.bottom <= window.innerHeight
-}
-
-const handleGlobalWheel = (e) => {
-  const el = techIconsContainer.value
-  if (!el) return
-
-  if (isDivInViewport(el) && el.scrollWidth > el.clientWidth) {
-    const delta = e.deltaY || e.deltaX
-
-    if (delta > 0) {
-      if (el.scrollLeft + el.clientWidth < el.scrollWidth) {
-        e.preventDefault()
-        el.scrollLeft += delta
-      }
-    } else if (delta < 0) {
-      if (el.scrollLeft > 0) {
-        e.preventDefault()
-        el.scrollLeft += delta
-      }
-    }
-  }
-}
+let animation = null
 
 onMounted(() => {
-  window.addEventListener('wheel', handleGlobalWheel, { passive: false })
+  const el = techIconsList.value
+  if (!el) return
+
+  const listWidth = el.offsetWidth
+
+  animation = gsap.to(el, {
+    x: -listWidth,
+    duration: 15,
+    ease: 'linear',
+    repeat: -1,
+    modifiers: {
+      x: gsap.utils.unitize(x => parseFloat(x) % -listWidth)
+    }
+  })
 })
+
 onUnmounted(() => {
-  window.removeEventListener('wheel', handleGlobalWheel)
+  if (animation) animation.kill()
 })
 </script>
 
 <template>
   <div>
     <h1
-      class="text-2xl text-violet-500 dark:text-violet-400 border-b-2 border-violet-500 dark:border-violet-400 mb-4 font-bold"
-    >
+      class="text-2xl text-violet-500 dark:text-violet-400 border-b-2 border-violet-500 dark:border-violet-400 mb-4 font-bold">
       {{ $t('technologies.title') }}
     </h1>
-    <div
-      ref="techIconsContainer"
-      class="tech-icons-container flex whitespace-nowrap overflow-hidden"
-    >
-      <UTooltip
-        v-for="(item, index) in techList"
-        :key="index"
-        :text="item.name"
-        :delay="500"
-        :popper="{ arrow: true, placement: 'top' }"
-      >
-        <UIcon :name="item.icon" class="tech-icon mr-2 mb-2 h-24 w-24" />
-      </UTooltip>
+    <div ref="techIconsContainer" class="tech-icons-container relative overflow-hidden" style="width: 100%;">
+      <div ref="techIconsList" class="tech-icons-list flex" style="will-change: transform;">
+        <template v-for="n in 2" :key="n">
+          <div class="flex">
+            <UTooltip v-for="(item, index) in techList" :key="n + '-' + index" :text="item.name" :delay="500"
+              :popper="{ arrow: true, placement: 'top' }">
+              <UIcon :name="item.icon" class="tech-icon mr-2 mb-2 h-24 w-24" />
+            </UTooltip>
+          </div>
+        </template>
+      </div>
     </div>
   </div>
 </template>
