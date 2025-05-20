@@ -96,15 +96,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     },
     bodyAttrs: {
       // Ajout du GTM noscript dans le body
-      innerHTML: `<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-PFK7ECDTN0"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-PFK7ECDTN0');
-</script>`,
+      innerHTML: `<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KV6NMD5Q"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>`,
       'data-hid': 'gtmBody',
     },
   },
