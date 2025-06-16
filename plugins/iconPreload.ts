@@ -14,15 +14,12 @@ export default defineNuxtPlugin({
       'material-symbols:dark-mode-outline-rounded',
     ]
 
-    // Précharge les icônes lorsque l'application est chargée
-    if (process.client) {
-      setTimeout(() => {
-        allIcons.forEach((icon) => {
-          const [collection, name] = icon.split(':')
-          // Force le chargement de l'icône via le système de cache du navigateur
-          fetch(`/node_modules/@iconify/icons-${collection}/${name}.svg`).catch(() => {}) // Ignore les erreurs silencieusement
-        })
-      }, 0)
+    // Nous supprimons la logique de préchargement qui cause des erreurs 404
+    // Le module @nuxt/icon se charge déjà de gérer le chargement des icônes correctement
+
+    // Éventuellement pour débugger, on peut afficher les icônes qui seront utilisées
+    if (process.dev) {
+      console.log('Icons that will be used:', allIcons)
     }
   },
 })
