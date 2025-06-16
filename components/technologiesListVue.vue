@@ -1,22 +1,12 @@
 <script setup>
 import { techList } from '~/data/tech'
-import { onMounted, ref, onUnmounted, onBeforeMount } from 'vue'
+import { onMounted, ref, onUnmounted } from 'vue'
 import { gsap } from 'gsap'
 
 const techIconsContainer = ref(null)
 const techIconsList = ref(null)
-const iconsLoaded = ref(false)
 
 let animation = null
-
-// Préchargement des icônes
-onBeforeMount(() => {
-  // Force le chargement des icônes avant le montage du composant
-  techList.forEach(item => {
-    const img = new Image()
-    img.src = `/node_modules/@iconify/icons-${item.icon.split(':')[0]}/${item.icon.split(':')[1]}.svg`
-  })
-})
 
 onMounted(() => {
   const el = techIconsList.value
@@ -24,8 +14,6 @@ onMounted(() => {
 
   // Attendre un court moment pour s'assurer que les icônes sont correctement chargées
   setTimeout(() => {
-    iconsLoaded.value = true
-
     const listWidth = el.offsetWidth
 
     animation = gsap.to(el, {
@@ -45,6 +33,7 @@ onUnmounted(() => {
 })
 </script>
 
+
 <template>
   <div>
     <h1
@@ -57,10 +46,7 @@ onUnmounted(() => {
           <div class="flex">
             <UTooltip v-for="(item, index) in techList" :key="n + '-' + index" :text="item.name" :delay="500"
               :popper="{ arrow: true, placement: 'top' }">
-              <!-- Utiliser une div de fallback pendant le chargement -->
-              <div v-if="!iconsLoaded"
-                class="loading-icon h-24 w-24 mr-2 mb-2 bg-gray-200 dark:bg-gray-700 rounded-md animate-pulse"></div>
-              <UIcon v-else :name="item.icon" class="tech-icon mr-2 mb-2 h-24 w-24" />
+              <UIcon :name="item.icon" class="tech-icon mr-2 mb-2 h-24 w-24" />
             </UTooltip>
           </div>
         </template>

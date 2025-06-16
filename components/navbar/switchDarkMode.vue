@@ -11,25 +11,11 @@ const changeLanguage = () => {
 
 <template>
   <div>
-    <u-button
-      :icon="locale === 'en' ? 'twemoji:flag-france' : 'twemoji:flag-united-kingdom'"
-      class="ml-3"
-      color="violet"
-      size="lg"
-      variant="soft"
-      @click="changeLanguage"
-    />
-    <u-button
-      :icon="
-        isDarkMode
-          ? 'material-symbols:sunny-outline-rounded'
-          : 'material-symbols:dark-mode-outline-rounded'
-      "
-      class="ml-3"
-      color="violet"
-      size="lg"
-      variant="soft"
-      @click="toggleDarkMode"
-    />
+    <u-button :icon="locale === 'en' ? 'twemoji:flag-france' : 'twemoji:flag-united-kingdom'" class="ml-3"
+      color="violet" size="lg" variant="soft" @click="changeLanguage" />
+    <u-button :icon="isDarkMode
+      ? 'line-md:sun-rising-loop'
+      : 'line-md:moon-simple'
+      " class="ml-3" color="violet" size="lg" variant="soft" @click="toggleDarkMode" />
   </div>
 </template>

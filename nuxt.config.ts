@@ -22,7 +22,7 @@ export default defineNuxtConfig({
     },
   },
 
-  plugins: ['~/plugins/i18nPlugin.ts', '~/plugins/iconPreload.ts'],
+  plugins: ['~/plugins/i18nPlugin.ts'],
 
   components: [
     { path: '~/components', pathPrefix: false },
@@ -40,35 +40,14 @@ export default defineNuxtConfig({
   ],
 
   icon: {
-    // Configuration améliorée pour résoudre les problèmes sur Vercel
-    size: '24px', // Taille par défaut
+    size: '24px',
     class: 'icon',
-    serverBundle: {
-      collections: ['twemoji', 'material-symbols', 'mdi'],
-      includeIDs: [
-        'mdi:language-php',
-        'mdi:language-css3',
-        'mdi:language-html5',
-        'mdi:language-javascript',
-        'mdi:language-typescript',
-        'mdi:language-python',
-        'mdi:font-awesome',
-        'mdi:tailwind',
-        'mdi:laravel',
-        'mdi:symfony',
-        'mdi:vuejs',
-        'mdi:nuxt',
-        'mdi:docker',
-        'mdi:wordpress',
-        'twemoji:flag-france',
-        'twemoji:flag-united-kingdom',
-        'material-symbols:sunny-outline-rounded',
-        'material-symbols:dark-mode-outline-rounded',
-      ],
+    clientBundle: {
+      scan: true,
+      sizeLimitKb: 256,
     },
-    ssr: true, // Force le rendu SSR des icônes
-    alias: {
-      // Ajouter des alias si nécessaire
+    serverBundle: {
+      collections: ['twemoji', 'line-md', 'mdi'], // <!--- this
     },
   },
 
