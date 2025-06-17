@@ -1,4 +1,7 @@
 {
+  "nav": {
+    "home": "Home"
+  },
   "presentation": {
     "title": "Presentation",
     "developer": "Full Stack Developer",
@@ -13,7 +16,8 @@
     "description": "Here are some articles I wrote on various topics. I hope you enjoy reading them!",
     "read_more": "Read more",
     "see_all": "See all",
-    "no_posts": "No articles have been published yet."
+    "no_posts": "No articles have been published yet.",
+    "back_to_posts": "Back to posts"
   },
   "timeline": {
     "title": "Timeline",

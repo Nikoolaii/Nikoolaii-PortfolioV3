@@ -1,4 +1,7 @@
 {
+  "nav": {
+    "home": "Accueil"
+  },
   "presentation": {
     "title": "Présentation",
     "developer": "Développeur Full Stack",
@@ -13,7 +16,9 @@
     "description": "Voici quelques articles que j'ai écrits sur divers sujets. J'espère que vous prendrez plaisir à les lire !",
     "read_more": "Lire la suite",
     "see_all": "Voir tout",
-    "no_posts": "Aucun article n'a été publié pour le moment."
+    "no_posts": "Aucun article n'a été publié pour le moment.",
+    "back_to_posts": "Retour aux articles",
+    
   },
   "timeline": {
     "title": "Parcours",
