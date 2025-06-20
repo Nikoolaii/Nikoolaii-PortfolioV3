@@ -26,7 +26,7 @@ This project is a personal portfolio website that showcases my work, my experien
 - [![Nuxt][Nuxt-badge]][Nuxt-url] - A general-purpose programming language
 
 [Nuxt-badge]: https://img.shields.io/badge/nuxt-3670A0?style=for-the-badge&logo=nuxt&logoColor=ffdd54
-[Nuxt-url]: https://nuxt.com}
+[Nuxt-url]: https://nuxt.com
 
 ## ⚙ ️Setup
 
