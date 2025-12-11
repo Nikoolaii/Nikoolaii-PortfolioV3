@@ -47,7 +47,8 @@
         "1": "Development of CMS modules",
         "2": "Customer ticket support",
         "3": "Development of CMS themes",
-        "4": "Implementation of functional scripts"
+        "4": "Implementation of functional scripts",
+        "5" : "Implementation of new features and debugging on the main project",
       }
     },
     "bts_sio": {
