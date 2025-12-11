@@ -48,7 +48,8 @@
         "1": "Développement de modules CMS",
         "2": "Support de tickets clients",
         "3": "Développement de thèmes CMS",
-        "4": "Mise en place de scripts fonctionnels"
+        "4": "Mise en place de scripts fonctionnels",
+        "5" : "Mise en place de nouvelles features et debug sur le projet principal",
       }
     },
     "bts_sio": {
